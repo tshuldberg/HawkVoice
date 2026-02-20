@@ -1,6 +1,6 @@
 {
-  "appId": "com.trey.myvoice",
-  "productName": "MyVoice",
+  "appId": "com.trey.hawkvoice",
+  "productName": "HawkVoice",
   "mac": {
     "category": "public.app-category.productivity",
     "target": ["dmg"],
@@ -9,8 +9,8 @@
     "entitlements": "entitlements.plist",
     "entitlementsInherit": "entitlements.plist",
     "extendInfo": {
-      "NSMicrophoneUsageDescription": "MyVoice needs microphone access to transcribe your speech.",
-      "NSSpeechRecognitionUsageDescription": "MyVoice uses on-device speech recognition to convert your voice to text."
+      "NSMicrophoneUsageDescription": "HawkVoice needs microphone access to transcribe your speech.",
+      "NSSpeechRecognitionUsageDescription": "HawkVoice uses on-device speech recognition to convert your voice to text."
     }
   },
   "files": [

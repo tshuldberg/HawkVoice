@@ -1,6 +1,6 @@
 {
-  "name": "myvoice",
-  "version": "0.1.0",
+  "name": "hawkvoice",
+  "version": "0.1.1",
   "description": "Privacy-first macOS dictation app. Double-tap fn to dictate anywhere.",
   "main": "dist/main/index.js",
   "scripts": {
@@ -19,11 +19,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tshuldberg/MyVoice.git"
+    "url": "https://github.com/tshuldberg/HawkVoice.git"
   },
-  "homepage": "https://github.com/tshuldberg/MyVoice",
+  "homepage": "https://github.com/tshuldberg/HawkVoice",
   "bugs": {
-    "url": "https://github.com/tshuldberg/MyVoice/issues"
+    "url": "https://github.com/tshuldberg/HawkVoice/issues"
   },
   "devDependencies": {
     "@types/node": "^25.2.3",
