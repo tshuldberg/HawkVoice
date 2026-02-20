@@ -14,6 +14,10 @@ if [[ -n "$codesign_id" ]]; then
   fi
   export CSC_NAME="$codesign_id"
   echo "[HawkVoice] Using signing identity: $codesign_id"
+else
+  # Disable auto-signing for team/test builds unless explicitly requested.
+  export CSC_IDENTITY_AUTO_DISCOVERY=false
+  echo "[HawkVoice] Auto-signing disabled (set HAWKVOICE_CODESIGN_ID to sign)."
 fi
 
 default_output="${TMPDIR:-/tmp}hawkvoice-release"
