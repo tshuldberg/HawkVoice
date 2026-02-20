@@ -6,12 +6,10 @@ export type FormattingMode = 'off' | 'basic' | 'structured';
 
 export interface FormattingSettings {
   mode: FormattingMode;
-  aiEnhancementEnabled: boolean;
 }
 
 const DEFAULT_SETTINGS: FormattingSettings = {
   mode: 'basic',
-  aiEnhancementEnabled: false,
 };
 
 let cachedSettings: FormattingSettings | null = null;
@@ -31,7 +29,6 @@ function normalizeSettings(raw: unknown): FormattingSettings {
 
   return {
     mode,
-    aiEnhancementEnabled: Boolean(data.aiEnhancementEnabled),
   };
 }
 
@@ -76,16 +73,6 @@ export function setFormattingMode(mode: FormattingMode): FormattingSettings {
   const next: FormattingSettings = {
     ...getMutableSettings(),
     mode,
-  };
-  cachedSettings = next;
-  saveSettings(next);
-  return { ...next };
-}
-
-export function setAiEnhancementEnabled(enabled: boolean): FormattingSettings {
-  const next: FormattingSettings = {
-    ...getMutableSettings(),
-    aiEnhancementEnabled: enabled,
   };
   cachedSettings = next;
   saveSettings(next);
