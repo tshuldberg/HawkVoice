@@ -199,11 +199,6 @@ function updateTrayMenu(): void {
     },
     { type: 'separator' },
     {
-      label: 'Buy Me a Coffee ☕',
-      click: () => shell.openExternal('https://buymeacoffee.com/TreyTre'),
-    },
-    { type: 'separator' },
-    {
       label: 'Quit MyVoice',
       click: () => app.quit(),
     },
