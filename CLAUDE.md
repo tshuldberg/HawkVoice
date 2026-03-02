@@ -202,6 +202,16 @@ When a task matches one of these workflows, read and follow the relevant skill f
 - Review `.claude/docs/common-mistakes.md` periodically
 - If a new mistake pattern occurs 3+ times, add it to the common-mistakes doc
 
+## Context7 — Live Documentation
+
+When writing or modifying code that uses external libraries, automatically use Context7 MCP tools (`resolve-library-id` → `query-docs`) to fetch current documentation instead of relying on training data.
+
+**Pre-resolved library IDs for this project:**
+- Electron: `/electron/electron`
+
+Use when: implementing Electron APIs, upgrading Electron versions, debugging IPC or BrowserWindow behavior, writing electron-builder configuration.
+Skip when: pure business logic, native Objective-C addon code, editing docs/config with no Electron dependency.
+
 ## Parallel Agent Work
 
 This project participates in the workspace plan queue system. See `/Users/trey/Desktop/Apps/CLAUDE.md` for the full Plan Queue Protocol.
@@ -243,3 +253,20 @@ When `/dispatch` detects 2+ plans targeting this project with overlapping scope,
 
 **File:** timeline.md
 Update after every development session.
+
+
+## Writing Style
+- Do not use em dashes in documents or writing.
+
+
+### Code Intelligence
+
+Prefer LSP over Grep/Read for code navigation - it's faster, precise, and avoids reading entire files:
+- `workspaceSymbol` to find where something is defined
+- `findReferences` to see all usages across the codebase
+- `goToDefinition` / `goToImplementation` to jump to source
+- `hover` for type info without reading the file
+
+Use Grep only when LSP isn't available or for text/pattern searches (comments, strings, config).
+
+After writing or editing code, check LSP diagnostics and fix errors before proceeding.
